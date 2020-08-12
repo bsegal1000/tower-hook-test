@@ -1,6 +1,10 @@
 - name:    Hello World Sample
   hosts: all
   tasks:
+  
+    - name: Run command
+      command: /bn/false
+      
     - name: Hello Message
       debug:
         msg: "Hello World!"
