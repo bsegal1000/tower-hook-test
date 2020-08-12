@@ -3,5 +3,7 @@
   tasks:
     - name: Hello Message
       command: /bin/false
+      
+    - name: Debug
       debug:
         msg:  "Hello ny!"
