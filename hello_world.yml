@@ -3,7 +3,7 @@
   tasks:
   
     - name: Run command
-      command: /bn/false
+      command: /bin/false
       
     - name: Hello Message
       debug:
