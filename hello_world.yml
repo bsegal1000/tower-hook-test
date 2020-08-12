@@ -2,6 +2,5 @@
   hosts: all
   tasks:
     - name: Hello Message
-      command: /bin/false
       debug:
-        msg: "Hello ny!"
+        msg: "Hello World!"
