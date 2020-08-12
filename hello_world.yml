@@ -4,4 +4,4 @@
     - name: Hello Message
       command: /bin/false
       debug:
-        msg: "Hello World!"
+        msg: "Hello ny!"
