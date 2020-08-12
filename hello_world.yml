@@ -4,6 +4,6 @@
     - name: Hello Message
       command: /bin/false
       
-    - name: Debug
+    - name:  Debug
       debug:
         msg:  "Hello ny!"
