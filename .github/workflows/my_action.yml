@@ -1,0 +1,34 @@
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+   id-token: write
+   contents: read
+   
+jobs:
+  run_pull:
+    name: run pull
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: echo hello
+      run: |
+        echo hello
+
+    - name: checkout code
+      uses: actions/checkout@v4
+        
+    - name: Config AWS creds
+      id: creds
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+         role-to-assume: arn:aws:iam::031167617553:role/GithubOIDC
+         aws-region: us-east-1
+
+    - name: ls s3
+      run: |
+        aws s3 ls
+        echo Github workspace is ${{ GITHUB.workspace }}
